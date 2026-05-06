@@ -1,0 +1,31 @@
+/*
+================================================================================
+Tags
+================================================================================
+*/
+
+.tag {
+    background-color: $color-gray-lighten-3;
+    border-radius: $radius;
+    color: $color-text;
+    padding: 0.3em 0.6em;
+
+    &--xs      { font-size: 0.65em; }
+    &--sm      { font-size: 0.8em; }
+    &--caption { font-size: 0.9em; }
+    &--subtitle { font-size: 1.1em; }
+}
+
+.svg-icon {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.badge-status{
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    display:inline-block;
+}
