@@ -47,7 +47,7 @@
                                 <th>Área</th>
                                 <th>Marca</th>
                                 <th>Modelo</th>
-                                <th>P.U</th>
+                                <th>Categoría</th>
                                 <th>Cantidad</th>
                                 <th>Estado</th>
                                 <th class="pr-4">Acciones</th>
@@ -73,8 +73,8 @@
                                 <td data-label="Modelo:">
                                     @{{ equipoItem.model }}
                                 </td>
-                                <td data-label="P.U.:">
-                                    @{{ equipoItem.pu }}
+                                <td data-label="Categoría:">
+                                    @{{ equipoItem.category }}
                                 </td>
                                 <td data-label="Cantidad:">
                                     @{{ equipoItem.quantity }}

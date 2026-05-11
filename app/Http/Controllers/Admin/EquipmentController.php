@@ -37,6 +37,7 @@ class EquipmentController extends Controller
         $equipment->control_tag = $request->control_tag;
         $equipment->area = $request->area;
         $equipment->product = $request->product;
+        $equipment->category = $request->category;
         $equipment->brand = $request->brand;
         $equipment->model = $request->model;
         $equipment->pu = $request->pu;
@@ -72,6 +73,7 @@ class EquipmentController extends Controller
         $equipment->control_tag = $request->control_tag;
         $equipment->area = $request->area;
         $equipment->product = $request->product;
+        $equipment->category = $request->category;
         $equipment->brand = $request->brand;
         $equipment->model = $request->model;
         $equipment->pu = $request->pu;

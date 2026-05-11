@@ -82,6 +82,14 @@
                                     <field-errors name="model"></field-errors>
                                 </div>
                             </div>
+                            <div class="md:col-1/2">
+                                <div class="form-control">
+                                    <label for="category">Categoría</label>
+                                    <text-field name="category" v-model="fields.category" initial="{{ $equipment->category }}">
+                                    </text-field>
+                                    <field-errors name="category"></field-errors>
+                                </div>
+                            </div>
                         </div>
                         <div class="md:row">
                             <div class="md:col-1/2">

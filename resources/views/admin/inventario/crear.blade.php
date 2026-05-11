@@ -61,18 +61,25 @@
                             </div>
                         </div>
                         <div class="md:row">
-                            <div class="md:col-1/2">
+                            <div class="md:col-1/3">
                                 <div class="form-control">
                                     <label for="brand">Marca</label>
                                     <text-field name="brand" v-model="fields.brand"></text-field>
                                     <field-errors name="brand"></field-errors>
                                 </div>
                             </div>
-                            <div class="md:col-1/2">
+                            <div class="md:col-1/3">
                                 <div class="form-control">
                                     <label for="model">Modelo</label>
                                     <text-field name="model" v-model="fields.model"></text-field>
                                     <field-errors name="model"></field-errors>
+                                </div>
+                            </div>
+                            <div class="md:col-1/3">
+                                <div class="form-control">
+                                    <label for="category">Categoría</label>
+                                    <text-field name="category" v-model="fields.category"></text-field>
+                                    <field-errors name="category"></field-errors>
                                 </div>
                             </div>
                         </div>

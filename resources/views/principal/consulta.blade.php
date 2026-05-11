@@ -89,6 +89,10 @@
             color:#6b7280;
             margin-bottom:30px;
         }
+        .mx-15 {
+            margin-left:15px;
+            margin-right:15px;
+        }
         </style>
     </head>
 

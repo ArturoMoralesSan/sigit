@@ -167,10 +167,10 @@
                         <textarea name="description"></textarea>
                     </div>
 
-                    <div class="col-full">
+                    <!-- <div class="col-full">
                         <label>Fotografía / Evidencia</label>
                         <input type="file" name="photo">
-                    </div>
+                    </div> -->
 
                     <div class="col-full">
                         <button type="submit" class="btn " id="btnEnviar">

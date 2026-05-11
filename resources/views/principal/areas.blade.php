@@ -92,7 +92,6 @@ svg{
     background:#f8fafb;
 }
 
-/* Responsive título */
 @media(max-width:768px){
     .logo-title{
         font-size:22px;
@@ -107,6 +106,10 @@ svg{
     letter-spacing:1px;
     margin-bottom: 20px;
 }
+.mx-15 {
+    margin-left:15px;
+    margin-right:15px;
+}
 
 .back{
     display:inline-block;
@@ -117,10 +120,11 @@ svg{
     margin-bottom:15px;
     padding-left:1.5rem;
     }
+
 </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0 mx-15">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <h1 class="h1-header">SIGIT – Agendar espacios</h1>

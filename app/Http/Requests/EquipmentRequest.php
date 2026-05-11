@@ -18,6 +18,7 @@ class EquipmentRequest extends FormRequest
             'control_tag' => 'required|string',
             'area'        => 'required|string',
             'product'     => 'required|string',
+            'category'    => 'required|string',
             'brand'       => 'required|string',
             'model'       => 'required|string',
             'pu'          => 'required|string',

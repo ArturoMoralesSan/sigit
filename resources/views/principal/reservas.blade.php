@@ -179,6 +179,11 @@ h1{
             </div>
 
             <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label-custom">Nombre completo</label>
+                    <input type="text" id="name" class="input-custom">
+                    <div class="error-text" id="error-name"></div>
+                </div>
 
                 <div class="mb-3">
                     <label class="form-label-custom">Asignatura / Práctica</label>
@@ -190,12 +195,6 @@ h1{
                     <label class="form-label-custom">Objetivo de la práctica</label>
                     <textarea id="obs" class="input-custom textarea-custom"></textarea>
                     <div class="error-text" id="error-obs"></div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label-custom">Nombre completo</label>
-                    <input type="text" id="name" class="input-custom">
-                    <div class="error-text" id="error-name"></div>
                 </div>
 
                 <input type="hidden" id="inicio">
@@ -229,7 +228,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         initialView: 'timeGridWeek',
         locale: 'es',
+
         selectable: true,
+        selectLongPressDelay: 0, // 👈 esto
+        selectMinDistance: 0,
         editable: false,
         height: 'auto',
         contentHeight: 650,
@@ -254,7 +256,12 @@ document.addEventListener('DOMContentLoaded', function () {
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            right: 'timeGridWeek,timeGridDay'
+        },
+         slotLabelFormat: {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
         },
 
         events: {

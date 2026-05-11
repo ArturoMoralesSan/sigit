@@ -101,6 +101,11 @@ svg{
         text-align:center;
     }
 }
+.mx-15 {
+    margin-left:15px;
+    margin-right:15px;
+
+}
 .h1-header{
     margin:0;
     font-size:20px;
@@ -112,10 +117,10 @@ svg{
 </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0 mx-15">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1 class="h1-header">SIGIT – Sistema Integral de Gestión para Ingeniería y Tecnología</h1>
+                    <h1 class="h1-header">SIGIT – Sistema Inteligente de Gestión e Innovación Tecnológica</h1>
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
@@ -188,12 +193,13 @@ svg{
                                 <line x1="12" y1="16" x2="12" y2="12"/>
                                 <line x1="12" y1="8" x2="12.01" y2="8"/>
                                 </svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Información General</div>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
+                                    <a href="{{ url('material') }}" class="underline text-gray-900 dark:text-white">Consultar disponibilidad de material</a></div>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Consulta reglamentos, lineamientos y horarios institucionales.
+                                    Busca material o equipo disponible para préstamo.
                                 </div>
                             </div>
                         </div>

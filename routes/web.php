@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\DamageReportController;
 use App\Http\Controllers\Admin\DamageReportController as AdminDamageReportController;
 use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\MaterialController;
+
 
 
 
@@ -51,6 +53,9 @@ Route::post('reportes', [DamageReportController::class,'store']);
 
 Route::get('consulta', [DamageReportController::class,'consulta']);
 Route::get('reportes/buscar', [DamageReportController::class,'buscar']);
+
+Route::get('material', [MaterialController::class,'consulta']);
+Route::get('material/buscar', [MaterialController::class,'buscar']);
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'noCache']], function() {
