@@ -8,13 +8,48 @@
 
 @section('content')
     <div class="dashboard-heading">
-        <h1 class="dashboard-heading__title">
-            Reservaciones de áreas
-        </h1>
-
-        <p class="dashboard-heading__caption">
-            Hay {{ $bookings->count() }} reservaciones de áreas.
-        </p>
+        <div class="md:row justify-between">
+            <div class="md:col-1/2">
+                <h1 class="dashboard-heading__title">
+                    reservaciones
+                </h1>
+                <p class="dashboard-heading__caption">
+                    Hay {{ $bookings->count() }} reservaciones registrados.
+                </p>
+            </div>
+            <div class="md:col-1/2 d-flex items-center">
+                <div class="row">
+                    <div class="md:col-1/3">
+                        <label for="month">Área</label>
+                        <select-filter
+                            name="area_id"
+                            selected="{{ app('request')->input('area_id') ? app('request')->input('area_id') : '1' }}"
+                            :options="{{ $areas }}"
+                        >
+                        </select-filter>
+                    </div>
+                    <div class="md:col-1/3">
+                        <label for="month">Mes</label>
+                        <select-filter
+                            name="month"
+                            selected="{{ app('request')->input('month') ? app('request')->input('month') : $actual_month }}"
+                            :options="{{ $months }}"
+                        >
+                        </select-filter>
+                    </div>
+                    <div class="md:col-1/3">
+                        <label for="year">Año</label>
+                        <select-filter
+                            name="year"
+                            selected="{{ app('request')->input('year') ? app('request')->input('year'): $actual_year }}"
+                            :options="{{ $years }}"
+                        >
+                        </select-filter>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
     <div class="fluid-container mb-16">
@@ -25,6 +60,43 @@
                 <img class="search-form_icon" src="{{ url('img/svg/search.svg') }}" alt="">
             </template>
         </form-search>
+        
+            <div class="d-flex justify-end mb-8">
+                <a href="{{ url(
+                    'export/excel/' .
+                        (app('request')->input('month') ? app('request')->input('month') : $actual_month) .
+                        '/' .
+                        (app('request')->input('year') ? app('request')->input('year') : $actual_year) .
+                        '/' .
+                        (app('request')->input('area_id') ? app('request')->input('area_id') : '1')
+                    ) }}"
+                    class="btn btn--sm">
+                        LAB-RG-01
+                    </a>
+                <a href="{{ url(
+                    'export/bitacora/' .
+                        (app('request')->input('month') ? app('request')->input('month') : $actual_month) .
+                        '/' .
+                        (app('request')->input('year') ? app('request')->input('year') : $actual_year) .
+                        '/' .
+                        (app('request')->input('area_id') ? app('request')->input('area_id') : '1')
+                    ) }}" 
+                    class="btn btn--sm">
+                    LAB-RG-03
+                </a>
+                <a href="{{ url(
+                    'export/word/' .
+                        (app('request')->input('month') ? app('request')->input('month') : $actual_month) .
+                        '/' .
+                        (app('request')->input('year') ? app('request')->input('year') : $actual_year) .
+                        '/' .
+                        (app('request')->input('area_id') ? app('request')->input('area_id') : '1')
+                    ) }}"
+                    class="btn btn--sm">
+                        LAB-RG-06
+                    </a>
+            </div>
+        
         @include('components.alert')
         <section class="db-panel">
             <h3 class="db-panel__title">

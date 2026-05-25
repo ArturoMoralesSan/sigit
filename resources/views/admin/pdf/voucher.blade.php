@@ -9,7 +9,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('img/material.png'); /* Ruta a tu imagen de fondo */
+            background-image: url('{{ asset("img/material.png") }}');
             background-repeat: no-repeat;
             background-size:contain;
             position: relative; 

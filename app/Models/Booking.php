@@ -18,7 +18,8 @@ class Booking extends Model
         'start_time',        
         'end_time',        
         'status',        
-        'color'    
+        'color' ,
+        'asignature'   
     ];       
     
     protected $casts = [

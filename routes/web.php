@@ -18,9 +18,6 @@ use App\Http\Controllers\Admin\DamageReportController as AdminDamageReportContro
 use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\MaterialController;
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +54,9 @@ Route::get('reportes/buscar', [DamageReportController::class,'buscar']);
 Route::get('material', [MaterialController::class,'consulta']);
 Route::get('material/buscar', [MaterialController::class,'buscar']);
 
+Route::get('export/word/{month}/{year}/{area}', [AdminBookingController::class, 'exportWord']);
+Route::get('export/excel/{month}/{year}/{area}', [AdminBookingController::class, 'exportExcel']);
+Route::get('export/bitacora/{month}/{year}/{area}', [AdminBookingController::class, 'exportBitacora']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'noCache']], function() {
     Route::view('/', 'admin/dashboard');
@@ -119,6 +119,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'noCache']], functio
     Route::put('reservaciones/{id}/actualizar', [AdminBookingController::class, 'update']);
     Route::delete('reservaciones/eliminar/{id}', [AdminBookingController::class, 'delete']);
 
+    
     //Reportes
     Route::get('reportes', [AdminDamageReportController::class,'index']);
     Route::get('reportes/{id}/editar', [AdminDamageReportController::class, 'edit']);

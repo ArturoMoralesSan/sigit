@@ -186,7 +186,13 @@ h1{
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label-custom">Asignatura / Práctica</label>
+                    <label class="form-label-custom">Asignatura</label>
+                    <input type="text" id="asignatura" class="input-custom">
+                    <div class="error-text" id="error-asignatura"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label-custom">Práctica</label>
                     <input type="text" id="titulo" class="input-custom">
                     <div class="error-text" id="error-titulo"></div>
                 </div>
@@ -326,6 +332,7 @@ function guardar() {
         body:JSON.stringify({
             titulo:document.getElementById('titulo').value,
             name:document.getElementById('name').value,
+            asignatura:document.getElementById('asignatura').value,
             obs:document.getElementById('obs').value,
             espacio: @json($area->id),
             inicio:document.getElementById('inicio').value,

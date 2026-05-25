@@ -9,7 +9,7 @@
     
     <div class="container">
         <div class="login-form">
-            <h1 class="h1-header">SIGIT – Sistema Integral de Gestión para Ingeniería y Tecnología</h1>
+            <h1 class="h1-header">SIGIT – Sistema Inteligente de Gestión e Innovación Tecnológica</h1>
             <form class="form-boxed" method="POST" action="{{ route('login') }}">
                 @csrf
                 <h1 class="h3 text-center">Iniciar Sesión</h1>

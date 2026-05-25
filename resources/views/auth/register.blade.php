@@ -6,7 +6,8 @@
 @section('content')
 <div class="section section-gray">
     <div class="container">
-        <div class="login-form">        
+        <div class="login-form"> 
+            <h1 class="h1-header">SIGIT – Sistema Inteligente de Gestión e Innovación Tecnológica</h1>       
             <form class="form-boxed" method="POST" action="{{ route('register') }}">
                 @csrf
                 <h1 class="h3 text-center">Registro</h1>

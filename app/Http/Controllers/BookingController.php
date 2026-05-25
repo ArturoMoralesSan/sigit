@@ -31,7 +31,7 @@ class BookingController extends Controller
         foreach ($bookings as $row) {
 
             $data[] = [
-                'title' => $row->title . ' | ' . $row->name,
+                'title' => $row->asignature . ' | ' . $row->name,
                 'start' => Carbon::parse($row->date)->format('Y-m-d').'T'.$row->start_time,
                 'end' => Carbon::parse($row->date)->format('Y-m-d').'T'.$row->end_time,
                 'backgroundColor' => $row->color,
@@ -49,10 +49,13 @@ class BookingController extends Controller
             'titulo' => 'required|string|max:255',
             'name'   => 'required|string|max:255',
             'obs'    => 'required|string',
+            'asignatura' => 'required|string',
         ], [
             'titulo.required' => 'La asignatura es obligatoria',
             'name.required'   => 'El nombre es obligatorio',
             'obs.required'    => 'El objetivo es obligatorio',
+            'asignatura.required'    => 'La asignatura es obligatoria',
+
         ]);
 
         if ($validator->fails()) {
@@ -69,7 +72,7 @@ class BookingController extends Controller
             'area_id' => $request->espacio,
             'subject' => $request->obs,
             'name' => $request->name,
-
+            'asignature' => $request->asignatura,
             'date' => $inicio->format('Y-m-d'),
             'start_time' => $inicio->format('H:i:s'),
             'end_time' => $fin->format('H:i:s'),
