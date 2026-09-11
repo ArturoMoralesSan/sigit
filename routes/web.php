@@ -119,6 +119,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'noCache']], functio
     Route::put('reservaciones/{id}/actualizar', [AdminBookingController::class, 'update']);
     Route::delete('reservaciones/eliminar/{id}', [AdminBookingController::class, 'delete']);
 
+    Route::post('reservaciones/validar', [AdminBookingController::class, 'validar']);
     
     //Reportes
     Route::get('reportes', [AdminDamageReportController::class,'index']);
