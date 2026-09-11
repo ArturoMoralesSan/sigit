@@ -126,6 +126,10 @@ svg{
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0 mx-15">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <img style="
+                    width: 300px;
+                    margin-bottom:15px;
+                " src="{{ asset('img/LOGO_BIS_UNIPOLI.png') }}" alt="">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <h1 class="h1-header">SIGIT – Agendar espacios</h1>
                 </div>
